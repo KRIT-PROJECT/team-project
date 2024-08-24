@@ -1,0 +1,64 @@
+/* src/Demos.css */
+
+.custom-slider .slick-slide {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.5s, opacity 0.5s;
+  height: auto; /* Ensure the slide takes the auto height */
+}
+
+.custom-slider .slick-center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.custom-slider .slick-prev,
+.custom-slider .slick-next {
+  z-index: 1;
+  top: 40%;
+}
+
+.slick-dots li button:before {
+  color: black;
+}
+
+/* Active dot style */
+.slick-dots li.slick-active button:before {
+  color: red;
+}
+
+/* Customize the previous and next arrow buttons */
+.slick-prev:before,
+.slick-next:before {
+  color: black; /* Change this color to ensure it's visible on a white background */
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background-color: white; /* Ensure the video container has a white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .custom-slider .slick-slide {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-slider .slick-slide {
+    height: 200px; /* Adjust height for mobile screens */
+  }
+}
