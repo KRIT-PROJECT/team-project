@@ -1,9 +1,7 @@
-import { useState } from "react";
-import { IoChevronBackCircle } from "react-icons/io5";
-import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import { TfiYoutube } from "react-icons/tfi";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import courseData from "../utils/courseData.json";
+import { FaPlus, FaMinus } from "react-icons/fa"; // Adding FaMinus icon for collapse state
+import { useState } from "react";
 
 const CourseContent = () => {
   const { title } = useParams();
@@ -22,79 +20,60 @@ const CourseContent = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="px-20 py-5 flex flex-col">
       {filteredCourseData.map((data) => (
         <div
           key={data.id}
-          className="w-3/5 bg-[#202767] p-5 relative flex flex-col justify-center"
+          className="w-full max-w-3xl mb-10 mt-10 flex flex-col items-start"
         >
-          <div className="absolute top-5 left-5">
-            <Link to={"/"}>
-              <IoChevronBackCircle color="white" size="2.7em" />
-            </Link>
+          <h1 className="text-4xl font-semibold mb-6">{data.title}</h1>
+
+          <div className="flex gap-8 mb-6">
+            <div className="p-4">
+              <p className="text-gray-600 uppercase">Duration</p>
+              <p className="font-bold text-lg">{data.DURATION}</p>
+            </div>
+            <div className="p-4">
+              <p className="text-gray-600 uppercase">Mode of Training</p>
+              <p className="font-bold text-lg">{data.ModeofTraining}</p>
+            </div>
+            <div className="p-4">
+              <p className="text-gray-600 uppercase">Level</p>
+              <p className="font-bold text-lg">{data.LEVEL}</p>
+            </div>
           </div>
-          <div className="mt-16 mb-9">
-            <h1 className="text-center font-bold text-4xl text-white">
-              {data.title}
-            </h1>
+
+          <div className="w-full flex flex-col justify-start items-start">
+            <h2 className="font-semibold text-xl mb-4">
+              What is {data.title}?
+            </h2>
+            <p className="text-base leading-7 text-gray-800 text-justify">
+              {data.description}
+            </p>
           </div>
-          <div className="flex flex-col items-center gap-10">
+
+          {/* Accordions */}
+          <div className="w-full py-6">
+            <h1 className=" text-left p-3 text-2xl font-bold">{data.title} Course Curriculum</h1>
             {data.topics.map((topic, index) => (
-              <div
-                key={index}
-                className="bg-[#0E1663] w-3/4 p-2 rounded-lg flex flex-col items-center"
-              >
+              <div key={index} className="w-full mb-2">
                 <button
-                  className="flex items-center w-full px-4 justify-center"
+                  className="flex items-center shadow-md p-3 w-full gap-6 justify-between bg-gray-100"
                   onClick={() => toggleMenuVisibility(index)}
                 >
-                  {menuVisibility[index] ? (
-                    <MdOutlineKeyboardArrowUp color="white" size="2em" />
-                  ) : (
-                    <MdKeyboardArrowDown color="white" size="2em" />
-                  )}
-                  <h1 className="text-white text-lg font-bold">{topic.name}</h1>
+                  <div className="flex items-center gap-6">
+                    {menuVisibility[index] ? <FaMinus /> : <FaPlus />}
+                    <div>{topic.name}</div>
+                  </div>
                 </button>
-                <div
-                  className={`w-full overflow-hidden transition-all duration-300 ${
-                    menuVisibility[index] ? "max-h-screen" : "max-h-0"
-                  }`}
-                >
-                  {menuVisibility[index] && (
-                    <div className="w-4/5 p-2 m-auto bg-[#0E1663] rounded-lg">
-                      <p className="text-white text-center">
-                        {topic.description}
-                      </p>
-                    </div>
-                  )}
-                </div>
+                {menuVisibility[index] && (
+                  <div className="p-4 shadow-md">{topic.description}</div>
+                )}
               </div>
             ))}
           </div>
         </div>
       ))}
-      <div className="w-2/5 p-8 flex flex-col gap-10 justify-center items-center">
-        {filteredCourseData.map((data) => (
-          <div key={data.id} className="p-3 border-none bg-none">
-            <img
-              src={data.image}
-              alt={data.title}
-              className="w-full h-40 md:h-80 lg:h-60 object-cover rounded-md border-none bg-none"
-            />
-          </div>
-        ))}
-        <div className="w-3/4 h-40 bg-[#202767] flex flex-col gap-10 justify-center items-center rounded-xl">
-          <h1 className="text-white font-bold text-xl">FORM</h1>
-          <button className="text-white font-bold text-lg bg-[#1E163B] py-2 px-8">
-            LINK
-          </button>
-        </div>
-        <div className="w-3/4 h-40 bg-[#202767] flex justify-center items-center rounded-xl">
-          <button>
-            <TfiYoutube size="8em" color="white" />
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

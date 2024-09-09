@@ -16,6 +16,7 @@
 .custom-slider .slick-next {
   z-index: 1;
   top: 40%;
+  height: 20px;
 }
 
 .slick-dots li button:before {

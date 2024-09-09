@@ -1,178 +1,190 @@
 [
-    {
-      "id": 1,
-      "title": "React",
-      "description": "Learn React from beginner to advanced level, covering key concepts and advanced techniques for building dynamic web applications.",
-      "duration": 40,
-      "image":"https://tse3.mm.bing.net/th?id=OIP.VsvOr2Q2d_Ixr1aUDFGmIQHaHC&pid=Api&P=0&h=180",
-      "languages":["English"],
-      "topics": [
-        {
-          "name": "JSX",
-          "description": "JSX allows you to write HTML-like code in JavaScript, making it easier to create React components."
-        },
-        {
-          "name": "Components",
-          "description": "Components are the building blocks of React applications, enabling reusable and maintainable code."
-        },
-        {
-          "name": "State",
-          "description": "State stores component data that can change over time, triggering re-renders to update the UI."
-        },
-        {
-          "name": "Props",
-          "description": "Props are used to pass data between components, enabling dynamic and flexible UI components."
-        },
-        {
-          "name": "Hooks",
-          "description": "Hooks like useState and useEffect allow function components to manage state and side effects."
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "SnowFlake",
-      "description": "Master Snowflake data warehousing, including data loading, SQL operations, optimization, and scripting.",
-      "duration": 30,
-      "image":"https://tse2.mm.bing.net/th?id=OIP.sVMLFs4m2d9QGgyih-z2agHaHa&pid=Api&P=0&h=180",
-      "languages":["English"],
-      "topics": [
-        {
-          "name": "Data Loading",
-          "description": "Learn how to load data efficiently into Snowflake from various sources and automate the process."
-        },
-        {
-          "name": "SQL",
-          "description": "Understand core SQL operations within Snowflake, including querying, data manipulation, and schema management."
-        },
-        {
-          "name": "Optimization",
-          "description": "Optimize Snowflake performance with query tuning, efficient data storage, and compute resource management."
-        },
-        {
-          "name": "Scripting",
-          "description": "Explore Snowflake's scripting capabilities, including stored procedures and user-defined functions."
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Sql",
-      "description": "Comprehensive SQL course for beginners, covering fundamental concepts and practical skills for database interaction.",
-      "duration": 20,
-      "image":"https://logodix.com/logo/541959.jpg",
-      "languages":["English"],
-      "topics": [
-        {
-          "name": "SELECT",
-          "description": "Learn to write SELECT statements to query and retrieve data from databases."
-        },
-        {
-          "name": "JOIN",
-          "description": "Understand how to combine rows from multiple tables using various types of joins."
-        },
-        {
-          "name": "WHERE",
-          "description": "Use the WHERE clause to filter records based on specific conditions."
-        },
-        {
-          "name": "GROUP BY",
-          "description": "Group rows with the same values in specified columns and use aggregate functions."
-        },
-        {
-          "name": "ORDER BY",
-          "description": "Sort query results by one or more columns in ascending or descending order."
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Python",
-      "description": "Master Python programming from basics to advanced concepts, including data structures, OOP, and web development.",
-      "duration": 50,
-      "image":"https://logohistory.net/wp-content/uploads/2023/06/Python-Emblem.png",
-      "languages": ["English"],
-      "topics": [
-        {
-          "name": "Basics",
-          "description": "Learn the fundamental syntax and basic programming constructs of Python."
-        },
-        {
-          "name": "Data Structures",
-          "description": "Understand and work with Python's built-in data structures like lists, tuples, sets, and dictionaries."
-        },
-        {
-          "name": "OOP",
-          "description": "Explore object-oriented programming concepts and how they are implemented in Python."
-        },
-        {
-          "name": "Web Development",
-          "description": "Learn to build web applications using frameworks like Django and Flask."
-        },
-        {
-          "name": "Data Analysis",
-          "description": "Perform data analysis using libraries like Pandas and NumPy."
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Java",
-      "description": "Comprehensive Java course covering fundamental concepts, advanced topics, and practical applications for building robust applications.",
-      "duration": 60,
-      "image":"https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png",
-      "languages": ["English"],
-      "topics": [
-        {
-          "name": "Syntax",
-          "description": "Learn the basic syntax and structure of Java programming language."
-        },
-        {
-          "name": "OOP",
-          "description": "Deep dive into object-oriented programming principles and practices in Java."
-        },
-        {
-          "name": "Data Structures",
-          "description": "Understand and implement various data structures in Java."
-        },
-        {
-          "name": "Concurrency",
-          "description": "Explore concurrency and multithreading in Java for building efficient applications."
-        },
-        {
-          "name": "Spring Framework",
-          "description": "Build enterprise-level applications using the Spring framework."
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "C++",
-      "description": "In-depth C++ course from basic syntax to advanced topics, including memory management, OOP, and STL.",
-      "duration": 55,
-      "image":"https://sdtimes.com/wp-content/uploads/2018/03/cpppp.png",
-      "languages": ["English"],
-      "topics": [
-        {
-          "name": "Basics",
-          "description": "Understand the basic syntax and structure of C++ programming language."
-        },
-        {
-          "name": "Pointers",
-          "description": "Learn about pointers, memory management, and dynamic allocation."
-        },
-        {
-          "name": "OOP",
-          "description": "Explore object-oriented programming concepts and their implementation in C++."
-        },
-        {
-          "name": "STL",
-          "description": "Learn to use the Standard Template Library (STL) for efficient data handling."
-        },
-        {
-          "name": "Templates",
-          "description": "Understand templates and generic programming in C++."
-        }
-      ]
-    }
-  ]
+  {
+    "id": 1,
+    "title": "React",
+    "description": "React is a declarative, powerful, and adaptable JavaScript collection for developing user interfaces. React enables developers to make large web applications that use data which can modify over time, without reloading the web page. It's main objective is to be quick, easy and scalable.Our ReactJs training course has created based on the latest technologies which are utilizing in corporation at high level.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://tse3.mm.bing.net/th?id=OIP.VsvOr2Q2d_Ixr1aUDFGmIQHaHC&pid=Api&P=0&h=180",
+    "languages":["English"],
+    "topics": [
+      {
+        "name": "JSX",
+        "description": "JSX allows you to write HTML-like code in JavaScript, making it easier to create React components."
+      },
+      {
+        "name": "Components",
+        "description": "Components are the building blocks of React applications, enabling reusable and maintainable code."
+      },
+      {
+        "name": "State",
+        "description": "State stores component data that can change over time, triggering re-renders to update the UI."
+      },
+      {
+        "name": "Props",
+        "description": "Props are used to pass data between components, enabling dynamic and flexible UI components."
+      },
+      {
+        "name": "Hooks",
+        "description": "Hooks like useState and useEffect allow function components to manage state and side effects."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "SnowFlake",
+    "description": "Snowflake is cloud based data warehouse and analytical tool. With so many SAAS based Data warehouse applications available currently that are competing against one another, Snowflake stands out among the crowd for it uniqueness in design and approach. Snowflake works on an application that is faster and easier to handle. Unlike other data warehouse systems Snowflake is not built on Big data platforms rather it works on new SQL engine that is best suited for cloud.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://tse2.mm.bing.net/th?id=OIP.sVMLFs4m2d9QGgyih-z2agHaHa&pid=Api&P=0&h=180",
+    "languages":["English"],
+    "topics": [
+      {
+        "name": "Data Loading",
+        "description": "Learn how to load data efficiently into Snowflake from various sources and automate the process."
+      },
+      {
+        "name": "SQL",
+        "description": "Understand core SQL operations within Snowflake, including querying, data manipulation, and schema management."
+      },
+      {
+        "name": "Optimization",
+        "description": "Optimize Snowflake performance with query tuning, efficient data storage, and compute resource management."
+      },
+      {
+        "name": "Scripting",
+        "description": "Explore Snowflake's scripting capabilities, including stored procedures and user-defined functions."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Sql",
+    "description": "SQL, or Structured Query Language, is a standardized programming language used for managing and manipulating relational databases. It allows users to perform various operations such as querying data, updating records, inserting new data, and deleting existing data. SQL is essential for interacting with databases, providing a way to retrieve specific information from large datasets efficiently. It supports various commands like SELECT, INSERT, UPDATE, DELETE, and more, which help in performing these tasks. SQL is widely used in data management, analytics, and backend development due to its powerful and flexible nature.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://logodix.com/logo/541959.jpg",
+    "languages":["English"],
+    "topics": [
+      {
+        "name": "SELECT",
+        "description": "Learn to write SELECT statements to query and retrieve data from databases."
+      },
+      {
+        "name": "JOIN",
+        "description": "Understand how to combine rows from multiple tables using various types of joins."
+      },
+      {
+        "name": "WHERE",
+        "description": "Use the WHERE clause to filter records based on specific conditions."
+      },
+      {
+        "name": "GROUP BY",
+        "description": "Group rows with the same values in specified columns and use aggregate functions."
+      },
+      {
+        "name": "ORDER BY",
+        "description": "Sort query results by one or more columns in ascending or descending order."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Python",
+    "description": "Python is a versatile and widely-used programming language known for its readability and simplicity. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability and syntax that allows programmers to express concepts in fewer lines of code. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python is popular for web development, data analysis, artificial intelligence, scientific computing, and automation due to its extensive standard library and active community. Its ease of learning and use makes it an excellent choice for both beginners and experienced developers.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://logohistory.net/wp-content/uploads/2023/06/Python-Emblem.png",
+    "languages": ["English"],
+    "topics": [
+      {
+        "name": "Basics",
+        "description": "Learn the fundamental syntax and basic programming constructs of Python."
+      },
+      {
+        "name": "Data Structures",
+        "description": "Understand and work with Python's built-in data structures like lists, tuples, sets, and dictionaries."
+      },
+      {
+        "name": "OOP",
+        "description": "Explore object-oriented programming concepts and how they are implemented in Python."
+      },
+      {
+        "name": "Web Development",
+        "description": "Learn to build web applications using frameworks like Django and Flask."
+      },
+      {
+        "name": "Data Analysis",
+        "description": "Perform data analysis using libraries like Pandas and NumPy."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Java",
+    "description": "Java is a high-level, object-oriented programming language that was developed by Sun Microsystems (now owned by Oracle) in the mid-1990s. It is widely known for its portability, as Java programs can run on any device equipped with the Java Virtual Machine (JVM), making it platform-independent . Java's syntax is similar to C++, but it simplifies the complex features of C++, such as pointers and memory management, making it more accessible and safer for developers. Java is extensively used in web development, mobile applications (especially Android), enterprise solutions, and large-scale systems, thanks to its robustness, scalability, and rich ecosystem of libraries and frameworks.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png",
+    "languages": ["English"],
+    "topics": [
+      {
+        "name": "Syntax",
+        "description": "Learn the basic syntax and structure of Java programming language."
+      },
+      {
+        "name": "OOP",
+        "description": "Deep dive into object-oriented programming principles and practices in Java."
+      },
+      {
+        "name": "Data Structures",
+        "description": "Understand and implement various data structures in Java."
+      },
+      {
+        "name": "Concurrency",
+        "description": "Explore concurrency and multithreading in Java for building efficient applications."
+      },
+      {
+        "name": "Spring Framework",
+        "description": "Build enterprise-level applications using the Spring framework."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "C++",
+    "description": "C++ is a powerful, high-performance programming language developed by Bjarne Stroustrup as an extension of the C language. Introduced in the early 1980s, C++ supports both procedural and object-oriented programming paradigms, making it a versatile language for various types of software development. Its features include classes, inheritance, polymorphism, templates, and exception handling, which enable developers to write complex and efficient programs. C++ is widely used in systems programming, game development, real-time simulation, and applications requiring high performance. Despite its complexity, C++ remains a popular choice for its flexibility and control over system resources.",
+    "DURATION": "8 weeks",
+    "ModeofTraining":"ONLINE",
+    "LEVEL":"Advanced",
+    "image":"https://sdtimes.com/wp-content/uploads/2018/03/cpppp.png",
+    "languages": ["English"],
+    "topics": [
+      {
+        "name": "Basics",
+        "description": "Understand the basic syntax and structure of C++ programming language."
+      },
+      {
+        "name": "Pointers",
+        "description": "Learn about pointers, memory management, and dynamic allocation."
+      },
+      {
+        "name": "OOP",
+        "description": "Explore object-oriented programming concepts and their implementation in C++."
+      },
+      {
+        "name": "STL",
+        "description": "Learn to use the Standard Template Library (STL) for efficient data handling."
+      },
+      {
+        "name": "Templates",
+        "description": "Understand templates and generic programming in C++."
+      }
+    ]
+  }
+]
