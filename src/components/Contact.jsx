@@ -22,17 +22,17 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-2xl flex flex-col md:flex-row max-w-4xl w-full ">
-        <div className="flex justify-center items-center md:w-1/2 mb-8 md:mb-0">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100" id='contactus'>
+      <div className="flex flex-col w-full max-w-4xl p-8 bg-white rounded-lg shadow-2xl md:flex-row ">
+        <div className="flex items-center justify-center mb-8 md:w-1/2 md:mb-0">
           <img
             src="https://template2.spayee.com/s/pages/assets/images/contactus.png"
             alt="Contact Us"
-            className="w-24 h-24 md:w-48 md:h-48 object-contain"
+            className="object-contain w-24 h-24 md:w-48 md:h-48"
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h1 className="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-red-600">CONTACT US</h1>
+          <h1 className="mb-4 text-2xl font-bold text-center text-red-600 md:text-3xl md:mb-6">CONTACT US</h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -68,7 +68,7 @@ const ContactUs = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full p-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full p-2 text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               Submit
             </button>
