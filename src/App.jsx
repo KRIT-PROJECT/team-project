@@ -11,7 +11,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App bg-[#f7f7f7] h-screen">
+      <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Body />} />

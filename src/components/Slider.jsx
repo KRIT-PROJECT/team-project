@@ -5,9 +5,9 @@ import { CiLinkedin } from 'react-icons/ci';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const images = [
-  '/mnt/data/WhatsApp Image 2024-08-02 at 11.38.15_1de60245.jpg',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQDYVGyTF6jBpGqZ_ISe1sp6LkKZjTSSH_xw&s',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZpSY5HdY1CyRUjhK1iD6ntPvL8Bc29RyXeA&s'
+  'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://plus.unsplash.com/premium_photo-1661416307260-5013ab7adc3f?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 ];
 
 const Slider = () => {
@@ -32,14 +32,14 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[700px] lg:h-[400px] overflow-hidden bg-gray-900 flex items-center justify-center">
+    <div className="relative w-full h-[500px] md:h-[700px] lg:h-[400px] overflow-hidden  flex my-32 items-center justify-center">
       {images.map((image, index) => (
         <div
           key={index}
           className={`absolute transition-opacity duration-500 ease-in-out ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           } flex items-center justify-center`}
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: '100%', height: '100%', padding: '0 60px' }} // Added padding on the x-axis
         >
           <img
             src={image}
@@ -53,7 +53,7 @@ const Slider = () => {
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full transition duration-300 ${
+            className={`w-2 h-2 rounded-full transition duration-800 ${
               index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
           />
@@ -62,14 +62,14 @@ const Slider = () => {
 
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
       >
         <MdKeyboardArrowLeft />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
       >
         <MdKeyboardArrowRight />
       </button>

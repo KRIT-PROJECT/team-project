@@ -5,9 +5,9 @@ const CourseCard = ({ title, Stars, Image }) => {
   
   return (
     <>
-      <div className="bg-blue-600 h-32 w-60 rounded-3xl cursor-pointer ">
+      <div className=" bg-gradient-to-r from-[#292E49] to-[#536976] h-32 w-60 rounded-xl cursor-pointer ">
         <Link to={"/courses/"+title}>
-         <div className="bg-white h-14 w-14 relative left-[186px] flex justify-center items-center rounded-tl-2xl rounded-bl-xl rounded-tr-2xl overflow-hidden">
+         <div className="bg-white h-14 w-14 relative left-[186px] flex justify-center items-center rounded-tl-xl rounded-bl-xl rounded-tr-xl overflow-hidden">
           <img 
             src={Image} 
             alt="" 
@@ -20,7 +20,7 @@ const CourseCard = ({ title, Stars, Image }) => {
           </h1>
           <div className="flex justify-evenly w-[80%] px-3">
             {[...Array(Stars)].map((_, index) => (
-              <IoStar key={index} color="#FFD700" size="1.5em" />
+              <IoStar key={index} color="#FFDE4D" size="1.5em" />
             ))}
             {[...Array(5 - Stars)].map((_, index) => (
               <IoStar key={index + Stars} color="white" size="1.5em" />

@@ -1,66 +1,82 @@
-// src/Demos.js
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useState } from 'react';
 import YouTube from 'react-youtube';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Demos.css'; // Custom CSS for the slider
 
-const Demos = () => {
-  const videoIds = ['-WwphtGgi8w', 'LYQfkTI6SZg', 'vlnowPD7SXM', 'eGghX65-5Hw']; // Replace with your YouTube video IDs
+const Media = () => {
+  const [playingVideo, setPlayingVideo] = useState(null);
 
-  const videoOptions = {
-    height: '390',
-    width: '100%',
+  const videoData = [
+    {
+      id: 1,
+      videoId: '43ChifYSMQA',
+      title: 'Video Title 1',
+      description: 'Description for Video 1',
+    },
+    {
+      id: 2,
+      videoId: 'ACIno1jh-ZQ',
+      title: 'Video Title 2',
+      description: 'Description for Video 2',
+    },
+    {
+      id: 3,
+      videoId: 'wX78iKhInsc',
+      title: 'Video Title 3',
+      description: 'Description for Video 3',
+    },
+    {
+      id: 4,
+      videoId: 'hg3umXU_qWc',
+      title: 'Video Title 4',
+      description: 'Description for Video 4',
+    },
+    {
+      id: 5,
+      videoId: '0NV1KdWRHck',
+      title: 'Video Title 5',
+      description: 'Description for Video 5',
+    },
+  ];
+
+  const opts = {
+    height: '230',
+    width: '400',
     playerVars: {
-      autoplay: 0,
+      autoplay: 0, // Change to 1 if you want to autoplay
     },
   };
 
-  const settings = {
-    centerMode: true,
-    centerPadding: '0',
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const handleThumbnailClick = (videoId) => {
+    setPlayingVideo(videoId);
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="flex flex-col items-center">
-        <header className="text-white py-6 w-full flex justify-center">
-          <h1 className="text-4xl font-medium">DEMOS</h1>
-        </header>
-        <div className="w-full flex justify-center">
-          <Slider {...settings} className="w-3/4 custom-slider">
-            {videoIds.map((videoId, index) => (
-              <div key={index} className="p-4">
-                <div className={`video-wrapper ${index === 1 ? 'active' : ''}`}>
-                  <YouTube videoId={videoId} opts={videoOptions} />
+    <div className="container mx-auto p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {videoData.map((video) => (
+          <div key={video.id} className="relative group">
+            {playingVideo === video.videoId ? (
+              <YouTube videoId={video.videoId} opts={opts} />
+            ) : (
+              <div
+                className="cursor-pointer overflow-hidden shadow-lg transition-transform transform group-hover:scale-105"
+                onClick={() => handleThumbnailClick(video.videoId)}
+              >
+                <img
+                  src={`https://img.youtube.com/vi/${video.videoId}/0.jpg`}
+                  alt={video.title}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="text-white text-xl font-bold">{video.title}</span>
+                  <span className="text-white text-sm text-center p-2">{video.description}</span>
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Demos;
+export default Media;
