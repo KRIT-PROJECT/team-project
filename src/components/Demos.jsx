@@ -50,8 +50,12 @@ const Media = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <>
+
+    <div className='my-20'>
+      <h1 className='flex justify-center items-center font-bold text-3xl text-black my-8'>DEMOS</h1>
+      <div className="flex justify-center items-center p-4 flex-wrap w-[83%] m-auto gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
         {videoData.map((video) => (
           <div key={video.id} className="relative group">
             {playingVideo === video.videoId ? (
@@ -76,6 +80,8 @@ const Media = () => {
         ))}
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

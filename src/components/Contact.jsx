@@ -22,7 +22,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100" id='contactus'>
       <div className="bg-white p-8 rounded-lg shadow-2xl flex flex-col md:flex-row max-w-4xl w-full ">
         <div className="flex justify-center items-center md:w-1/2 mb-8 md:mb-0">
           <img

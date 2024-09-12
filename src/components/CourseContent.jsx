@@ -20,7 +20,7 @@ const CourseContent = () => {
   };
 
   return (
-    <div className="px-20 py-5 flex flex-col">
+    <div className="px-10 py-20  flex flex-col">
       {filteredCourseData.map((data) => (
         <div
           key={data.id}

@@ -32,7 +32,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[700px] lg:h-[400px] overflow-hidden  flex my-32 items-center justify-center">
+    <div className="relative w-full h-[500px] md:h-[700px] lg:h-[600px] overflow-hidden  flex my-32 items-center justify-center">
       {images.map((image, index) => (
         <div
           key={index}
@@ -44,7 +44,7 @@ const Slider = () => {
           <img
             src={image}
             alt={`Slide ${index}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded"
           />
         </div>
       ))}

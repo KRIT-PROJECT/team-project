@@ -7,13 +7,13 @@ const Courses = () => {
     { title: "PYTHON", Stars: 5, Image: "https://logohistory.net/wp-content/uploads/2023/06/Python-Emblem.png" },
     { title: "JAVA", Stars: 4, Image: "https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" },
     { title: "C++", Stars: 3, Image: "https://sdtimes.com/wp-content/uploads/2018/03/cpppp.png" },
-    { title: "REACT", Stars: 2, Image: "https://clipground.com/images/react-js-clipart-8.png" },
+    { title: "REACT", Stars: 4, Image: "https://clipground.com/images/react-js-clipart-8.png" },
   ];
 
   return (
-    <div>
+    <div className="my-12" id='courses'>
       <div>
-        <h1 className="flex justify-center items-center font-bold text-3xl text-black my-8">TOP COURSES</h1>
+        <h1 className="flex justify-center items-center font-bold text-3xl text-black my-12">TOP COURSES</h1>
       </div>
       <div className="flex justify-center items-center p-4 flex-wrap w-[83%] m-auto gap-10">
         {CourseData.map((course, index) => (

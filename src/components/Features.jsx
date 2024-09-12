@@ -15,7 +15,7 @@ const features = [
 
 const PlatformFeatures = () => {
   return (
-    <div className="px-4 py-10 sm:px-10 md:px-20 lg:px-48">
+    <div className="px-4 py-10 max-sm:px-10 md:px-20 lg:px-48">
       <h1 className="text-3xl font-bold mb-8 text-center">Our Platform Features</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {features.map((feature, index) => (

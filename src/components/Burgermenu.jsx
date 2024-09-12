@@ -11,9 +11,9 @@ const Burgermenu = ({ header, courses }) => {
 
   return (
     <div>
-      <div className="p-4 md:hidden">
+      <div className="p-4 ">
         <button
-          className="text-2xl text-white focus:outline-none"
+          className="text-2xl text-black focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <RxCross2 /> : <RxHamburgerMenu />}
