@@ -5,12 +5,14 @@ import Contact from './Contact';
 import Slider from "./Slider";
 import AllCourse from "./AllCourse"
 import Reviews from "./Reviews"
+import Stats from "./Stats";
 const Body = () => {
   return (
     <>
       <div>
         <Slider />
         <Courses />
+        <Stats/>
         <Demos/>
         <AllCourse/>
         <Features/>

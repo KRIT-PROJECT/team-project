@@ -53,18 +53,18 @@ const Courses = () => {
   };
   return (
     <>
-      <div className="py-5">
+      <div className="py-[20vh] ">
         <div>
-          <h1 className="flex justify-center items-center font-bold text-3xl text-black">
+          <h1 className="flex items-center justify-center text-3xl font-bold text-black ">
             ALL COURSES
           </h1>
         </div>
-        <div className="flex gap-8 justify-center items-center py-3">
-          <button className="bg-blue-700 rounded-full p-2" onClick={scrollLeft}>
+        <div className="flex items-center justify-center gap-8 py-3">
+          <button className="p-2 bg-blue-700 rounded-full" onClick={scrollLeft}>
             <FaLessThan color="white" size="2em" />
           </button>
           <button
-            className="bg-blue-700 rounded-full p-2"
+            className="p-2 bg-blue-700 rounded-full"
             onClick={scrollRight}
           >
             <FaGreaterThan color="white" size="2em" />

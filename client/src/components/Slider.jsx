@@ -16,7 +16,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 4000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -32,28 +32,27 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[700px] lg:h-[400px] overflow-hidden  flex my-32 items-center justify-center">
+    <div className="relative w-full h-[500px] x-sm:h-[750px] sm:h-[700px] md:h-[700px] lg:h-[700px] overflow-hidden flex my-6 items-center justify-center mx-auto rounded-lg shadow-xl">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute transition-opacity duration-500 ease-in-out ${
+          className={`absolute transition-opacity duration-700 ease-in-out ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
-          } flex items-center justify-center`}
-          style={{ width: '100%', height: '100%', padding: '0 60px' }} // Added padding on the x-axis
+          } flex items-center justify-center w-full h-full`}
         >
           <img
             src={image}
-            alt={`Slide ${index}`}
-            className="w-full h-full object-cover"
+            alt={`Slide ${index + 1}`}
+            className="object-cover w-full h-full rounded-lg"
           />
         </div>
       ))}
 
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute flex space-x-2 transform -translate-x-1/2 bottom-4 sm:bottom-8 left-1/2">
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full transition duration-800 ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition duration-500 ${
               index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
           />
@@ -62,27 +61,27 @@ const Slider = () => {
 
       <button
         onClick={goToPrevious}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
+        className="absolute p-2 text-3xl text-white transition-colors duration-300 transform -translate-y-1/2 bg-gray-800 rounded-full sm:p-3 sm:text-5xl bg-opacity-60 left-2 sm:left-6 top-1/2 hover:bg-opacity-80"
       >
         <MdKeyboardArrowLeft />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-gray-800 bg-opacity-50 rounded-full"
+        className="absolute p-2 text-3xl text-white transition-colors duration-300 transform -translate-y-1/2 bg-gray-800 rounded-full sm:p-3 sm:text-5xl bg-opacity-60 right-2 sm:right-6 top-1/2 hover:bg-opacity-80"
       >
         <MdKeyboardArrowRight />
       </button>
 
-      <div className="absolute right-4 bottom-4 flex flex-col items-center space-y-4 p-2 bg-gray-800 bg-opacity-50 rounded-md">
+      <div className="absolute flex flex-col items-center p-3 space-y-3 bg-gray-900 bg-opacity-50 rounded-lg shadow-lg sm:p-4 sm:space-y-4 right-2 sm:right-8 bottom-2 sm:bottom-8">
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <AiOutlineInstagram className="text-pink-500 text-2xl hover:text-pink-700 transition-colors duration-300" />
+          <AiOutlineInstagram className="text-xl text-pink-500 transition-colors duration-300 sm:text-3xl hover:text-pink-700" />
         </a>
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebookF className="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-300" />
+          <FaFacebookF className="text-xl text-blue-600 transition-colors duration-300 sm:text-3xl hover:text-blue-800" />
         </a>
         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-          <CiLinkedin className="text-blue-700 text-2xl hover:text-blue-900 transition-colors duration-300" />
+          <CiLinkedin className="text-xl text-blue-700 transition-colors duration-300 sm:text-3xl hover:text-blue-900" />
         </a>
       </div>
     </div>

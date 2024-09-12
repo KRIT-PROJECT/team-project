@@ -11,9 +11,9 @@ const Courses = () => {
   ];
 
   return (
-    <div>
+    <div className=" py-[10vh]" >
       <div>
-        <h1 className="flex justify-center items-center font-bold text-3xl text-black my-8">TOP COURSES</h1>
+        <h1 className="flex items-center justify-center my-8 text-3xl font-bold text-black">TOP COURSES</h1>
       </div>
       <div className="flex justify-center items-center p-4 flex-wrap w-[83%] m-auto gap-10">
         {CourseData.map((course, index) => (

@@ -23,19 +23,19 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <div className="text-black py-10 bg-gray-50">
-      <h2 className="text-3xl font-bold mb-36 text-center text-gray-800">REVIEWS</h2> {/* Removed padding-top and increased margin-bottom */}
-      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-8 md:space-y-0 px-4">
+    <div className="py-32 text-black bg-gray-50" id='reviews'>
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-36">REVIEWS</h2> {/* Removed padding-top and increased margin-bottom */}
+      <div className="flex flex-col items-center justify-center px-4 space-y-8 md:flex-row md:space-x-6 md:space-y-0">
         {reviews.map(review => (
-          <div key={review.id} className="relative bg-white p-6 rounded-lg text-center w-full max-w-xs md:max-w-sm shadow-lg transition-transform transform hover:scale-105 h-64">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <img src={review.image} alt="Reviewer" className="rounded-full w-24 h-24 border-4 border-white shadow-md" />
+          <div key={review.id} className="relative w-full h-64 max-w-xs p-6 text-center transition-transform transform bg-white rounded-lg shadow-lg md:max-w-sm hover:scale-105">
+            <div className="absolute top-0 transform -translate-x-1/2 -translate-y-1/2 left-1/2">
+              <img src={review.image} alt="Reviewer" className="w-24 h-24 border-4 border-white rounded-full shadow-md" />
             </div>
-            <p className="mt-12 mb-4 text-gray-700 text-lg">{review.text}</p>
+            <p className="mt-12 mb-4 text-lg text-gray-700">{review.text}</p>
             {review.rating !== null && (
               <div className="flex justify-center">
                 {Array.from({ length: review.rating }, (_, index) => (
-                  <span key={index} className="text-yellow-500 text-lg">⭐</span>
+                  <span key={index} className="text-lg text-yellow-500">⭐</span>
                 ))}
               </div>
             )}

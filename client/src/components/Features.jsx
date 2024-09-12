@@ -15,17 +15,17 @@ const features = [
 
 const PlatformFeatures = () => {
   return (
-    <div className="px-4 py-10 sm:px-10 md:px-20 lg:px-48">
-      <h1 className="text-3xl font-bold mb-8 text-center">Our Platform Features</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div className="px-4  sm:px-10 md:px-20 lg:px-48 py-[10vh]" id='feature'>
+      <h1 className="mb-8 text-3xl font-bold text-center">Our Platform Features</h1>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-lg text-center hover:shadow-xl transition-transform transform hover:scale-105"
+            className="flex flex-col items-center p-6 text-center transition-transform transform border border-gray-200 rounded-lg shadow-lg hover:shadow-xl hover:scale-105"
           >
             <div className="mb-4 text-blue-600">{feature.icon}</div>
-            <h2 className="text-lg md:text-xl font-semibold mb-2">{feature.title}</h2>
-            <p className="text-gray-600 text-sm md:text-base">{feature.description}</p>
+            <h2 className="mb-2 text-lg font-semibold md:text-xl">{feature.title}</h2>
+            <p className="text-sm text-gray-600 md:text-base">{feature.description}</p>
           </div>
         ))}
       </div>
